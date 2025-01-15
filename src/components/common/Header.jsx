@@ -49,7 +49,7 @@ const Header = () => {
     { label: "INFRASTRUCTURE", href: "/infrastructure" },
     { label: "ENPRO SAUDI ARABIA", href: "/enpro-saudi-arabia" },
     { label: "CAREERS", href: "/career" },
-    { label: "CONTACT US", href: "/contact-us" },
+    { label: "CONTACT US", href: "/contact" },
   ];
 
   return (

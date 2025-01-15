@@ -1,5 +1,6 @@
 import { Box, Container, Heading, Text, Image, UnorderedList, ListItem, Flex } from '@chakra-ui/react';
-
+import renewableslogo from '../assets/logo/renewable-logo.png'
+import divider from '../assets/bg/divider.jpg'
 const Renewables = () => {
   return (
     <Box className="our-solution sec-padding" py={{ base: 6, md: 12 }}>
@@ -16,7 +17,7 @@ const Renewables = () => {
 
         <Box textAlign="center">
           <Image
-            src="https://www.enproindustries.in/wp-content/themes/enpro/assets/images/heading-hr.jpg"
+            src={divider}
             alt="heading-hr1"
             className="heading-hr1"
             data-aos="fade-down"
@@ -26,7 +27,7 @@ const Renewables = () => {
 
         <Box textAlign="center">
           <Image
-            src="https://www.enproindustries.in/wp-content/uploads/2023/07/renewable-logo.png"
+            src={renewableslogo}
             alt="Renewable Logo"
             className="renewable-logo"
             data-aos="flip-down"

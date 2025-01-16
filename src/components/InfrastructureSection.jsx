@@ -10,8 +10,9 @@ import p7 from '../assets/infra/p7.jpg';
 
 const InfrastructureSection = () => {
   return (
-    <Box as="section" py={{ base: 8, md: 16 }}>
+    <Box as="section" py={{ base: 8, md: 16 }} overflowX="hidden">
       <Container maxW="container.lg" px={{ base: 4, md: 8 }}>
+
         <Heading as="h2" fontSize={{ base: 'xl', md: '2xl' }} mb={4} color="red.500" textAlign="center">
           Infrastructure
         </Heading>
@@ -40,17 +41,17 @@ const InfrastructureSection = () => {
 
         {/* Lower Section */}
         <Box py={{ base: 8, md: 16 }}>
-          <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} spacing={{ base: 4, md: 6 }}>
-            {[
+          <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} spacing={{ base: 4, md: 6 }} w="100%">
+            {[ 
               { title: '5,000m² Manufacturing Area', imageSrc: p2 },
               { title: '20+ Welding Stations', imageSrc: p3 },
               { title: 'In-house Painting Booth', imageSrc: p4 },
               { title: '30T Crane Capacity', imageSrc: p5 },
               { title: 'In-house Shot-Blasting Booth', imageSrc: p1 },
               { title: 'Multi-level Rack Storage', imageSrc: p6 },
-              { title: 'API 614 Testing Facility', imageSrc: p7 },
+              { title: 'API 614 Testing Facility', imageSrc: p7 }
             ].map((item, index) => (
-              <Box key={index} data-aos="zoom-in-left" textAlign="center">
+              <Box key={index} data-aos="zoom-in-left" textAlign="center" w="100%">
                 <a href={item.imageSrc} data-lightbox="slide-show-" data-title={item.title}>
                   <Box mb={2}>
                     <Text fontSize={{ base: 'sm', md: 'lg' }} fontWeight="bold" color="red.500">
@@ -63,6 +64,7 @@ const InfrastructureSection = () => {
                     w="100%"
                     h={{ base: '200px', md: '300px' }}
                     objectFit="cover"
+                    borderRadius="md"
                   />
                 </a>
               </Box>

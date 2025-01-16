@@ -9,7 +9,7 @@ const SkidSystems = () => {
   }, []);
 
   return (
-    <Box py={12}>
+    <Box py={12} overflowX="hidden">
       <Container maxW="container.lg">
         <Heading as="h1" mb={4} textAlign="center" data-aos="fade-down">
           Engineered <Text as="span" color="red.500">Skid Systems</Text>

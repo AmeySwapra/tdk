@@ -24,7 +24,7 @@ function AboutUsPage() {
       </Helmet>
       <ScrollToTop />
       <Header />
-      <Banner imageUrl={aboutBanner} title={"ABOUT ENPRO INDUSTRIRES"} />
+      <Banner imageUrl={aboutBanner} title={"ABOUT ENPRO INDUSTRIES"} isAboutUs={true} />
       <BreadCrumb currentPage={"About US"} />
       <GeneralAbout />
       <VisionMissionValues/>

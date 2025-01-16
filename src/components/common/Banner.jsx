@@ -2,14 +2,16 @@ import React from "react";
 import { Box, Heading, useBreakpointValue } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
-const Banner = ({ imageUrl, title }) => {
- 
+const Banner = ({ imageUrl, title, isAboutUs }) => {
+
   const bannerHeight = useBreakpointValue({ base: "200px", md: "600px" });
-  const transformY = useBreakpointValue({ base: "-225%", lg: "-350%" });
+  const transformY = useBreakpointValue({
+    base: isAboutUs ? "-150%" : "-225%", 
+    lg: "-350%",
+  });
 
   return (
     <Box position="relative" height={bannerHeight} overflow="hidden">
-      
       <Box
         height="100%"
         backgroundImage={`url(${imageUrl})`}
@@ -18,7 +20,6 @@ const Banner = ({ imageUrl, title }) => {
         backgroundRepeat="no-repeat"
       ></Box>
 
-     
       <Box
         position="absolute"
         top={0}
@@ -29,7 +30,6 @@ const Banner = ({ imageUrl, title }) => {
         zIndex={1}
       ></Box>
 
-      
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }} 
         animate={{ opacity: 1, scale: 1 }} 

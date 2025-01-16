@@ -2,7 +2,7 @@ import { Box, Container, Heading, Text, Grid, Flex, Image, List, ListItem, Divid
 
 const ProcessEquipmentSection = () => {
   return (
-    <Box py={12} >
+    <Box py={12} overflowX="hidden">
       <Container maxW="container.lg">
         <Heading as="h1" mb={4} textAlign="center" data-aos="fade-down">
           Process <Text as="span" color="red.500">Equipment</Text>
@@ -15,7 +15,7 @@ const ProcessEquipmentSection = () => {
             mx="auto"
           />
         </Box>
-        
+
         {/* Product 1: Gas Coolers */}
         <Box 
           backgroundImage="url(https://www.enproindustries.in/wp-content/themes/enpro/assets/images/home/product-bg-left.png)"
@@ -32,7 +32,7 @@ const ProcessEquipmentSection = () => {
               />
             </Flex>
             <Box data-aos="fade-down">
-              <Heading as="h2" fontSize="xl" mb={4}>
+              <Heading as="h2" fontSize={{ base: "lg", md: "xl" }} mb={4}>
                 <strong>Gas</strong> Coolers
               </Heading>
               <Divider my={4} />
@@ -60,7 +60,7 @@ const ProcessEquipmentSection = () => {
         >
           <Grid templateColumns={{ base: "1fr", md: "1fr 1fr" }} gap={6} alignItems="center">
             <Box data-aos="fade-down">
-              <Heading as="h2" fontSize="xl" mb={4}>
+              <Heading as="h2" fontSize={{ base: "lg", md: "xl" }} mb={4}>
                 <strong>Shell</strong> & Tube Heat Exchangers
               </Heading>
               <Divider my={4} />
@@ -102,7 +102,7 @@ const ProcessEquipmentSection = () => {
               />
             </Flex>
             <Box data-aos="fade-down">
-              <Heading as="h2" fontSize="xl" mb={4}>
+              <Heading as="h2" fontSize={{ base: "lg", md: "xl" }} mb={4}>
                 <strong>Pressure</strong> Vessels
               </Heading>
               <Divider my={4} />
@@ -131,7 +131,7 @@ const ProcessEquipmentSection = () => {
         >
           <Grid templateColumns={{ base: "1fr", md: "1fr 1fr" }} gap={6} alignItems="center">
             <Box data-aos="fade-down">
-              <Heading as="h2" fontSize="xl" mb={4}>
+              <Heading as="h2" fontSize={{ base: "lg", md: "xl" }} mb={4}>
                 Crystallizers
               </Heading>
               <Divider my={4} />
@@ -171,7 +171,7 @@ const ProcessEquipmentSection = () => {
               />
             </Flex>
             <Box data-aos="fade-down">
-              <Heading as="h2" fontSize="xl" mb={4}>
+              <Heading as="h2" fontSize={{ base: "lg", md: "xl" }} mb={4}>
                 Condensers
               </Heading>
               <Divider my={4} />
@@ -196,19 +196,17 @@ const ProcessEquipmentSection = () => {
         >
           <Grid templateColumns={{ base: "1fr", md: "1fr 1fr" }} gap={6} alignItems="center">
             <Box data-aos="fade-down">
-              <Heading as="h2" fontSize="xl" mb={4}>
+              <Heading as="h2" fontSize={{ base: "lg", md: "xl" }} mb={4}>
                 Air Coolers
               </Heading>
               <Divider my={4} />
               <Text fontWeight="bold">Application:</Text>
               <List spacing={2}>
-                <ListItem>Power, Steel, Fertilizer, Petrochemical, Chemical, Food & Beverage</ListItem>
+                <ListItem>For natural gas application</ListItem>
               </List>
               <Text fontWeight="bold" mt={3}>Specifications:</Text>
               <List spacing={2}>
-                <ListItem>Max air flow: 50,000 CFM</ListItem>
-                <ListItem>Up to 50m long, 10m tall</ListItem>
-                <ListItem>Materials: Carbon Steel, SS304, SS316, Super Duplex, Super Austenitic Stainless Steel</ListItem>
+                <ListItem>Material: Stainless Steel, Carbon Steel</ListItem>
               </List>
             </Box>
             <Flex justify="center" data-aos="fade-left">
@@ -221,6 +219,7 @@ const ProcessEquipmentSection = () => {
             </Flex>
           </Grid>
         </Box>
+
       </Container>
     </Box>
   );

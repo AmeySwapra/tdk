@@ -79,8 +79,24 @@ const CertificationApprovals = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    centerMode: true, 
-    focusOnSelect: true, 
+    centerMode: true,
+    focusOnSelect: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   useEffect(() => {
@@ -92,14 +108,9 @@ const CertificationApprovals = () => {
   }, []);
 
   return (
-    <Box  py={10}>
+    <Box py={10} overflowX={'hidden'}>
       <Container maxW="container.xl">
-        <Heading
-          textAlign="center"
-          size="lg"
-          mb={5}
-          data-aos="fade-down"
-        >
+        <Heading textAlign="center" size="lg" mb={5} data-aos="fade-down">
           Certification &amp; <Text as="span" color="red.500">Approvals</Text>
         </Heading>
         <Box textAlign="center" mb={5}>

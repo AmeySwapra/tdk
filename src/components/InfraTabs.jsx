@@ -23,60 +23,46 @@ const shuffleArray = (array) => {
 
 const ImageTabs = () => {
   return (
-    <Box maxWidth="1200px" mx="auto">
+    <Box maxWidth="1200px" mx="auto" p={{ base: 4, md: 8 }}>
       <Tabs variant="enclosed" colorScheme="teal">
-        <TabList display="flex" justifyContent="center">
-          <Tab>Engineered Skids Division</Tab>
-          <Tab>Process Equipment Division</Tab>
-          <Tab>Headquaters</Tab>
-          <Tab>Enpro Saudi Arabia</Tab>
-          <Tab>R & D Facility</Tab>
-          <Tab>A Sustainable Workplace</Tab>
+        <TabList
+          display="flex"
+          flexWrap="wrap"
+          justifyContent="center"
+          gap={{ base: 2, md: 4 }}
+        >
+          <Tab fontSize={{ base: 'sm', md: 'md' }} color={'#d00000'} >Engineered Skids Division</Tab>
+          <Tab fontSize={{ base: 'sm', md: 'md' }} color={'#d00000'}>Process Equipment Division</Tab>
+          <Tab fontSize={{ base: 'sm', md: 'md' }} color={'#d00000'}>Headquaters</Tab>
+          <Tab fontSize={{ base: 'sm', md: 'md' }} color={'#d00000'}>Enpro Saudi Arabia</Tab>
+          <Tab fontSize={{ base: 'sm', md: 'md' }} color={'#d00000'}>R & D Facility</Tab>
+          <Tab fontSize={{ base: 'sm', md: 'md' }} color={'#d00000'}>A Sustainable Workplace</Tab>
         </TabList>
 
         <TabPanels>
-          <TabPanel>
-            <SimpleGrid columns={2} spacing={4}>
-              {shuffleArray(images).slice(0, 6).map((image, index) => (
-                <Image key={index} src={image} alt={`Engineered Skids ${index + 1}`} boxSize="100%" objectFit="cover" />
-              ))}
-            </SimpleGrid>
-          </TabPanel>
-          <TabPanel>
-            <SimpleGrid columns={2} spacing={4}>
-              {shuffleArray(images).slice(0, 6).map((image, index) => (
-                <Image key={index} src={image} alt={`Process Equipment ${index + 1}`} boxSize="100%" objectFit="cover" />
-              ))}
-            </SimpleGrid>
-          </TabPanel>
-          <TabPanel>
-            <SimpleGrid columns={2} spacing={4}>
-              {shuffleArray(images).slice(0, 6).map((image, index) => (
-                <Image key={index} src={image} alt={`Headquarters ${index + 1}`} boxSize="100%" objectFit="cover" />
-              ))}
-            </SimpleGrid>
-          </TabPanel>
-          <TabPanel>
-            <SimpleGrid columns={2} spacing={4}>
-              {shuffleArray(images).slice(0, 6).map((image, index) => (
-                <Image key={index} src={image} alt={`Enpro Saudi Arabia ${index + 1}`} boxSize="100%" objectFit="cover" />
-              ))}
-            </SimpleGrid>
-          </TabPanel>
-          <TabPanel>
-            <SimpleGrid columns={2} spacing={4}>
-              {shuffleArray(images).slice(0, 6).map((image, index) => (
-                <Image key={index} src={image} alt={`R & D Facility ${index + 1}`} boxSize="100%" objectFit="cover" />
-              ))}
-            </SimpleGrid>
-          </TabPanel>
-          <TabPanel>
-            <SimpleGrid columns={2} spacing={4}>
-              {shuffleArray(images).slice(0, 6).map((image, index) => (
-                <Image key={index} src={image} alt={`Sustainable Workplace ${index + 1}`} boxSize="100%" objectFit="cover" />
-              ))}
-            </SimpleGrid>
-          </TabPanel>
+          {Array(6)
+            .fill(null)
+            .map((_, tabIndex) => (
+              <TabPanel key={tabIndex}>
+                <SimpleGrid
+                  columns={{ base: 1, sm: 2 }}
+                  spacing={{ base: 2, md: 4 }}
+                >
+                  {shuffleArray(images)
+                    .slice(0, 6)
+                    .map((image, index) => (
+                      <Image
+                        key={index}
+                        src={image}
+                        alt={`Image ${index + 1}`}
+                        boxSize="100%"
+                        objectFit="cover"
+                        borderRadius="md"
+                      />
+                    ))}
+                </SimpleGrid>
+              </TabPanel>
+            ))}
         </TabPanels>
       </Tabs>
     </Box>

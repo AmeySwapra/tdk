@@ -15,6 +15,7 @@ import CorporateSocial from '../components/CorporateSocial'
 import PoliciesSection from '../components/PoliciesSection'
 import { Helmet } from "react-helmet-async";
 import ContactInfo from "../components/common/ContactInfo";
+import Timeline from "../components/Timeline";
 
 function AboutUsPage() {
   return (
@@ -28,6 +29,7 @@ function AboutUsPage() {
       <BreadCrumb currentPage={"About US"} />
       <GeneralAbout />
       <VisionMissionValues/>
+      <Timeline/>
       <EnproValues/>
       <TeamSection/>
       <EngineeringCapability/>

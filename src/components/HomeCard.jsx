@@ -163,7 +163,7 @@ export default function HomeCard() {
                 width="auto"
               >
                 <Heading
-                  fontSize="58px" 
+                  fontSize={{base: '30px', md: '45px', lg: '58px'}} 
                   lineHeight="shorter"
                   letterSpacing="wide"
                 >
